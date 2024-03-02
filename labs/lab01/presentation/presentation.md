@@ -37,8 +37,6 @@ sansfontoptions: Ligatures=TeX,Scale=MatchLowercase
 monofontoptions: Scale=MatchLowercase,Scale=0.9
 ---
 
-# Информация
-
 ## Докладчик
 
 :::::::::::::: {.columns align=center}
