@@ -78,87 +78,42 @@ header-includes:
 
 # Выполнение лабораторной работы
 
-Установим git и gh (рис. [-@fig:001]):
+Вырезаем из скринкаста нужные скриншоты (рис. [-@fig:001]):
 
-![Установка git и gh](image/image-1.png){#fig:001 width=70%}
+![Выбор скриншотов](image/image-1.png){#fig:001 width=70%}
 
-Зададим имя и email владельца репозитория (рис. [-@fig:002]):  
-*git config --global user.name "Aleksandr Mosolov"*  
-*git config --global user.email "tenderboylive2@gmail.com"*:
+Заполняем основные разделы, размещаем заголовки с помощью # (рис. [-@fig:002]):
 
-![Задаём имя и email](image/image-2.png){#fig:002 width=70%}
+![Размещаем заголовки](image/image-2.png){#fig:002 width=70%}
 
-Настроим utf-8 в выводе сообщений git
-Зададим имя начальной ветки (будем называть её master)
-Параметр autocrlf
-Параметр safecrlf (рис. [-@fig:003]):
+Предоставляем оформленную информацию со ссылкой на рисунки (рис. [-@fig:003]):
 
-![Настраиваем кодировку, задаём имя ветки и указываем параметры](image/image-3.png){#fig:003 width=70%}
+![Делаем ссылки](image/image-3.png){#fig:003 width=70%}
 
-По алгоритму rsa с ключём размером 4096 бит (рис. [-@fig:004]):  
-*ssh-keygen -t rsa -b 4096*
+Описываем действия из туиса, размещаем фотографии к тексту (рис. [-@fig:004]):
 
-![Создаём ключ по алгоритму rsa](image/image-4.png){#fig:004 width=70%}
+![Синтаксис размещения фотографий](image/image-4.png){#fig:004 width=70%}
 
-По алгоритму ed25519 (рис. [-@fig:005]):  
-*ssh-keygen -t ed25519*
+Заранее переименовываем фото, чтобы было удобнее заполнять поля (рис. [-@fig:005]):
 
-![Создаём ключ по алгоритму ed25519](image/image-5.png){#fig:005 width=70%}
+![Переименновываем](image/image-5.png){#fig:005 width=70%}
 
-Генерируем ключ (рис. [-@fig:006]):  
-*gpg --full-generate-key*  
+Заполняем cite.bib файл, предоставляем информацию о курсе в ТУИС (рис. [-@fig:006]):
 
-Из предложенных опций выбираем:  
-тип RSA and RSA;
-размер 4096;
-выберите срок действия; значение по умолчанию — 0 (срок действия не истекает никогда).
+![Доп. литература](image/image-6.png){#fig:006 width=70%}
 
-![Генерируем ключ](image/image-6.png){#fig:006 width=70%}
+Делаем выводы и заканчиваем работу, создаем в папке с report.md файл типа docx и pdf с помощью команды make (рис. [-@fig:007]):
 
-Выводим список ключей и копируем отпечаток приватного ключа:  
-*gpg --list-secret-keys --keyid-format LONG*
+![Создаем make-файлы](image/image-7.png){#fig:007 width=70%}
 
-Выводим и копируем ключ (рис. [-@fig:009]):  
-*gpg --armor --export tenderboylive2@gmail.com | cat*
+Проверяем работу на ошибки (рис. [-@fig:08]):
 
-![Выводим и копируем ключ](image/image-9.png){#fig:009 width=70%}
+![Проверка](image/image-8.png){#fig:08 width=70%}
 
-Переходим в настройки GitHub (https://github.com/settings/keys), нажмаем на кнопку New GPG key и вставляем полученный ключ в поле ввода.
-
-Настраиваем конфиг (рис. [-@fig:010]):  
-*git config --global user.signingkey tenderboylive2@gmail.com*  
-*git config --global commit.gpgsign true*  
-*git config --global gpg.program $(which gpg2)*  
-
-![Настраиваем конфиг](image/image-10.png){#fig:010 width=70%}
-
-
-Необходимо создать шаблон рабочего пространства (рис. [-@fig:011]):  
-*mkdir -p ~/work/study/2023-2024/"Операционные системы"*  
-*cd ~/work/study/2023-2024/"Операционные системы"*  
-*gh repo create study_2023-2024_os-intro --template=yamadharma/course-directory-student-template --public*  
-*git clone --recursive git@github.com:<owner>/study_2023-2024_os-intro.git os-intro*
-
-![Материалы курса на моём github](image/image-res.png){#fig:011 width=70%}
-
-Переходим в каталог курса и удаляем лишние файлы (рис. [-@fig:012]):  
-*cd ~/work/study/2023-2024/"Операционные системы"/os-intro*  
-*rm package.json*
-
-![Удаляем лишние файлы](image/image-11.png){#fig:012 width=70%}
-
-Создаём необходимые каталоги (рис. [-@fig:013]):  
-*echo os-intro > COURSE*  
-*make* 
-
-![Создаём необходимые каталоги](image/image-12.png){#fig:013 width=70%}
-
-Фиксируем изменения на github (рис. [-@fig:014]):  
+Фиксируем изменения на github:
 *git add .*  
-*git commit -am 'feat(main): make course structure'*  
+*git commit -am 'feat(main): make lab03'*  
 *git push* 
-
-![Фиксируем изменения на github](image/image-last.png){#fig:014 width=70%}
 
 # Выводы
 
