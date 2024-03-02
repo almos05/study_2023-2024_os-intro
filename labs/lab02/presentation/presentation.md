@@ -121,7 +121,7 @@ monofontoptions: Scale=MatchLowercase,Scale=0.9
 Выводим и копируем ключ  
 *gpg --armor --export tenderboylive2@gmail.com | cat*
 
-![Выводим и копируем ключ](image/image-9.png)
+![Выводим и копируем ключ](image/image-9.png){height=40%}
 
 ## GPG key
 
@@ -134,7 +134,7 @@ monofontoptions: Scale=MatchLowercase,Scale=0.9
 *git config --global commit.gpgsign true*  
 *git config --global gpg.program $(which gpg2)*  
 
-![Настраиваем конфиг](image/image-10.png)
+![Настраиваем конфиг](image/image-10.png){height=40%}
 
 ## Создаём шаблон
 
@@ -144,7 +144,7 @@ monofontoptions: Scale=MatchLowercase,Scale=0.9
 *gh repo create study_2023-2024_os-intro --template=yamadharma/course-directory-student-template --public*  
 *git clone --recursive git@github.com:<owner>/study_2023-2024_os-intro.git os-intro*
 
-![Материалы курса на моём github](image/image-res.png)
+![Материалы курса на моём github](image/image-res.png){height=40%}
 
 ## Удаляем лишние файлы
 
@@ -171,7 +171,7 @@ monofontoptions: Scale=MatchLowercase,Scale=0.9
 
 ![Фиксируем изменения на github](image/image-last.png)
 
-# Выводы
+## Выводы
 
 В ходе работы мы изучили идеологию и применение средств контроля версий.
 Освоили умения по работе с git. 
