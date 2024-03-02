@@ -1,7 +1,7 @@
 ---
 ## Front matter
 lang: ru-RU
-title: Лабораторная работа №2
+title: Лабораторная работа №3
 subtitle: Презентация
 author:
   - Мосолов А.Д.
@@ -67,7 +67,7 @@ monofontoptions: Scale=MatchLowercase,Scale=0.9
 
 Вырезаем из скринкаста нужные скриншоты
 
-![Выбор скриншотов](image/image-1.png)
+![Выбор скриншотов](image/image-1.png){height=50%}
 
 ## Размещаем заголовки
 
