@@ -1,7 +1,7 @@
 ---
 ## Front matter
 lang: ru-RU
-title: Лабораторная работа №1
+title: Лабораторная работа №2
 subtitle: Презентация
 author:
   - Мосолов А.Д.
