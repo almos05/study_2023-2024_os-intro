@@ -149,14 +149,14 @@ header-includes:
 
 Создаём необходимые каталоги (рис. [-@fig:013]):  
 *echo os-intro > COURSE*  
-*make*
+*make* 
 
 ![Создаём необходимые каталоги](image/image-12.png){#fig:013 width=70%}
 
 Фиксируем изменения на github (рис. [-@fig:014]):  
 *git add .*  
 *git commit -am 'feat(main): make course structure'*  
-*git push*
+*git push* 
 
 ![Фиксируем изменения на github](image/image-last.png){#fig:014 width=70%}
 
