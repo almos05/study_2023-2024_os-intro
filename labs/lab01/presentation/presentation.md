@@ -65,7 +65,7 @@ monofontoptions: Scale=MatchLowercase,Scale=0.9
 
 Скачиваем с официального сайта Fedora Sway, прикрепляем файл с расширением .iso в поле
 
-![Запуск виртуальной машины с диска](image/image-1.png)
+![Запуск виртуальной машины с диска](image/image-1.png){height=60%}
 
 ## Выбор языка
 
@@ -110,7 +110,7 @@ SELINUX=enforcing
 на значение  
 SELINUX=permissive
 
-![Замена значения](image/image-13.png)
+![Замена значения](image/image-13.png){height=60%}
 
 ## Запускаем терминальный мультиплексор
 
