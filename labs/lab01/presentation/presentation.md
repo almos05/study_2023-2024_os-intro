@@ -110,7 +110,7 @@ SELINUX=enforcing
 на значение  
 SELINUX=permissive
 
-![Замена значения](image/image-13.png){height=40%}
+![Замена значения](image/image-13.png){height=30%}
 
 ## Запускаем терминальный мультиплексор
 
