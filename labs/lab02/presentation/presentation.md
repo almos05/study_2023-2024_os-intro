@@ -1,175 +1,103 @@
 ---
 ## Front matter
 lang: ru-RU
-title: Лабораторная работа №4
-subtitle: "Презентация"
-author:
-  - Мосолов А.Д.
+title: Анализ файловой системы Linux.
+subtitle: Простейший шаблон
+author: |
+      Ворожейкин Владимир Вячеславович \inst{1}
+  
 institute:
-  - Российский университет дружбы народов, Москва, Россия
-date: 14 марта 2024
+ \inst{1}Российский университет дружбы народов, Москва, Россия
+date: 23 марта 2024, Москва, Россия
 
-## i18n babel
-babel-lang: russian
-babel-otherlangs: english
-
-## Formatting pdf
-toc: false
-toc-title: Содержание
-slide_level: 2
-aspectratio: 169
-section-titles: true
-theme: metropolis
-header-includes:
- - \metroset{progressbar=frametitle,sectionpage=progressbar,numbering=fraction}
- - '\makeatletter'
- - '\beamer@ignorenonframefalse'
- - '\makeatother'
-
-## Fonts
+## Formatting
 mainfont: PT Serif
 romanfont: PT Serif
 sansfont: PT Sans
 monofont: PT Mono
-mainfontoptions: Ligatures=TeX
-romanfontoptions: Ligatures=TeX
-sansfontoptions: Ligatures=TeX,Scale=MatchLowercase
-monofontoptions: Scale=MatchLowercase,Scale=0.9
+toc: false
+slide_level: 2
+theme: metropolis
+header-includes: 
+ - \metroset{progressbar=frametitle,sectionpage=progressbar,numbering=fraction}
+ - '\makeatletter'
+ - '\beamer@ignorenonframefalse'
+ - '\makeatother'
+aspectratio: 43
+section-titles: true
+
 ---
 
-## Докладчик
+# Цели и задачи работы
 
-:::::::::::::: {.columns align=center}
-::: {.column width="70%"}
+## Цель лабораторной работы
 
-  * Мосолов Александр Денисович
-  * Студент, НПИбд0?-23
-  * Российский университет дружбы народов
-  * [1132236128@pfur.ru](mailto:1132236128@pfur.ru)
+Ознакомление с файловой системой Linux, её структурой, именами и содержанием
+каталогов.
 
-:::
-::: {.column width="30%"}
+# Процесс выполнения лабораторной работы
 
-:::
-::::::::::::::
+## Копирование и переименовывание файла io.h 
 
-## Цель
+![Замена имени](image/1.png){ #fig:001 width=70% height=70% }
 
+## Создание директории ski.plases
 
-Изучить идеологию и применение средств контроля версий.  
-Освоить умения по работе с git. 
+![Создание директории](image/2.png){ #fig:002 width=70% height=70% }
 
-## Задание
+## Перемещение файла equipment в каталог ski.plases
 
-Научиться применять команды git, работать с github.
+![Перемещение файла](image/3.png){ #fig:003 width=70% height=70% }
 
-## Установка git и gh
+## Переименую файл ~/ski.plases/equipment в ~/ski.plases/equiplist
 
-Установим git и gh:
+![Замена имени](image/4.png){ #fig:004 width=70% height=70% }
 
-![Установка git и gh](image/image-1.png)
+## Перемещаю файлы ~/ski.plases/equiplist и equiplist2 в каталог ~/ski.plases/equipment
 
-## Задаём имя и email
+![Перемещение файла](image/5.png){ #fig:005 width=70% height=70% }
 
-Зададим имя и email владельца репозитория:  
-*git config --global user.name "Aleksandr Mosolov"*  
-*git config --global user.email "tenderboylive2@gmail.com"*:
+## Создаю и перемещаю каталог ~/newdir в каталог ~/ski.plases и называю его plans
 
-![Задаём имя и email](image/image-2.png)
+![Создание каталога](image/6.png){ #fig:006 width=70% height=70% }
 
-## Настраиваем кодировку, задаём имя ветки и указываем параметры
+## Создаю все необходимые файлы и каталоги
 
-Настроим utf-8 в выводе сообщений git
-Зададим имя начальной ветки (будем называть её master)
-Параметр autocrlf
-Параметр safecrlf:
+![Создание каталогов и файлов](image/7.png){ #fig:007 width=70% height=70% }
 
-![Настраиваем кодировку, задаём имя ветки и указываем параметры](image/image-3.png)
+## Использую команду chmod для того, чтобы присвоить перечисленным ниже файлам выделенные права доступа 
 
-## Создаём ключ по алгоритму rsa
+![Создание каталогов и файлов](image/8.png){ #fig:008 width=70% height=70% }
 
-По алгоритму rsa с ключём размером 4096 бит:  
-*ssh-keygen -t rsa -b 4096*
+## Просмотр содержимого файла /etc/password
 
-![Создаём ключ по алгоритму rsa](image/image-4.png)
+![Просмотр файла](image/9.png){ #fig:009 width=70% height=70% }
 
-## Создаём ключ по алгоритму ed25519
+## Копирую файл ~/feathers в файл ~/file.old
 
-По алгоритму ed25519:  
-*ssh-keygen -t ed25519*
+![Копирование файла](image/10.png){ #fig:010 width=70% height=70% }
 
-![Создаём ключ по алгоритму ed25519](image/image-5.png)
+## Переместите файл ~/file.old в каталог ~/play. Копирую каталог ~/play в каталог ~/fun.
 
-## Генерируем ключ
+![Выполнение пунктов  4.3 и 4.4](image/11.png){ #fig:011 width=70% height=70% }
 
-Генерируем ключ:  
-*gpg --full-generate-key*  
+## Перемещаю каталог ~/fun в каталог ~/play и называю его games. Лишаю владельца файла ~/feathers права на чтение
 
-Из предложенных опций выбираем:  
-тип RSA and RSA;
-размер 4096;
-выберите срок действия; значение по умолчанию — 0 (срок действия не истекает никогда).
+![Выполнение пунктов  4.5 и 4.6](image/12.png){ #fig:012 width=70% height=70% }
 
-![Генерируем ключ](image/image-6.png)
+## Лишаю владельца каталога ~/play права на выполнение
 
-## Выводим и копируем ключ
+![Лишение права на выполнение](image/13.png){ #fig:013 width=70% height=70% }
 
-Выводим список ключей и копируем отпечаток приватного ключа:  
-*gpg --list-secret-keys --keyid-format LONG*
+## Даю владельцу каталога ~/play право на выполнение
 
-Выводим и копируем ключ:  
-*gpg --armor --export tenderboylive2@gmail.com | cat*
+![Выдача права на выполнение](image/14.png){ #fig:014 width=70% height=70% }
 
-![Выводим и копируем ключ](image/image-9.png)
+## Читаю man по командам mount, fsck, mkfs, kill
 
-## Настраиваем конфиг
+![Чтение по командам](image/15.png){ #fig:015 width=70% height=70% }
 
-Переходим в настройки GitHub (https://github.com/settings/keys), нажмаем на кнопку New GPG key и вставляем полученный ключ в поле ввода.
+## Вывод
 
-Настраиваем конфиг:  
-*git config --global user.signingkey tenderboylive2@gmail.com*  
-*git config --global commit.gpgsign true*  
-*git config --global gpg.program $(which gpg2)*  
+Во время выполнения данной лабораторной работы я приобрел практические навыки по применению команд для работы с файлами и каталогами, по управлению процессами, по проверке использования диска и обслуживанию файловой системы.
 
-![Настраиваем конфиг](image/image-10.png)
-
-## Материалы курса на моём github
-
-
-Необходимо создать шаблон рабочего пространства:  
-*mkdir -p ~/work/study/2023-2024/"Операционные системы"*  
-*cd ~/work/study/2023-2024/"Операционные системы"*  
-*gh repo create study_2023-2024_os-intro --template=yamadharma/course-directory-student-template --public*  
-*git clone --recursive git@github.com:<owner>/study_2023-2024_os-intro.git os-intro*
-
-![Материалы курса на моём github](image/image-res.png)
-
-## Удаляем лишние файлы
-
-Переходим в каталог курса и удаляем лишние файлы:  
-*cd ~/work/study/2023-2024/"Операционные системы"/os-intro*  
-*rm package.json*
-
-![Удаляем лишние файлы](image/image-11.png)
-
-## Создаём необходимые каталоги
-
-Создаём необходимые каталоги:  
-*echo os-intro > COURSE*  
-*make*
-
-![Создаём необходимые каталоги](image/image-12.png)
-
-## Фиксируем изменения на github
-
-Фиксируем изменения на github:  
-*git add .*  
-*git commit -am 'feat(main): make course structure'*  
-*git push*
-
-![Фиксируем изменения на github](image/image-last.png)
-
-## Выводы
-
-В ходе работы мы изучили идеологию и применение средств контроля версий.
-Освоили умения по работе с git. 
